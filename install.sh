@@ -1,11 +1,11 @@
 #!/bin/bash
 # ===================================================================================
-#   Live Wallpaper Manager by Daury DiCaprio
+#   Installer for Live Wallpaper Manager for Omarchy
 # ===================================================================================
 
-echo "--- Daury's Live Wallpaper Manager Installer ---"
+echo "--- Live Wallpaper for Omarchy :: Installer ---"
 
-# --- Step 1: Check for dependencies ---
+# --- Step 1: Check for required packages ---
 echo "[1/4] Checking for required packages..."
 REQUIRED_PKGS=("mpvpaper" "jq" "ffmpeg" "libnotify" "swww")
 MISSING_PKGS=()
@@ -34,14 +34,14 @@ echo "Script installed."
 # --- Step 3: Add the keyboard shortcut ---
 echo "[3/4] Adding keyboard shortcut to ~/.config/hypr/bindings.conf..."
 BINDINGS_FILE="$HOME/.config/hypr/bindings.conf"
-SHORTCUT_LINE='# Daury'\''s Live Wallpaper Toggle\nbind = SUPER CTRL, W, exec, ~/.local/bin/live-wallpaper-toggle.sh'
+SHORTCUT_LINE='\n# Live Wallpaper Toggle for Omarchy\nbind = SUPER CTRL, W, exec, ~/.local/bin/live-wallpaper-toggle.sh'
 
 # Check if the shortcut already exists to avoid duplicates
 if grep -q "live-wallpaper-toggle.sh" "$BINDINGS_FILE"; then
     echo "Shortcut already exists. Skipping."
 else
     # Append the shortcut to the file
-    echo -e "\n$SHORTCUT_LINE" >> "$BINDINGS_FILE"
+    echo -e "$SHORTCUT_LINE" >> "$BINDINGS_FILE"
     echo "Shortcut added."
 fi
 
@@ -51,4 +51,3 @@ echo "------------------------------------------------"
 echo "IMPORTANT: You must now reload Hyprland for the new shortcut to work."
 echo "You can do this via the Omarchy menu (Super + Space -> System -> Reload) or by logging out and back in."
 echo "Enjoy your live wallpapers!"
-

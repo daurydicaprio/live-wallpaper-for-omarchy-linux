@@ -16,11 +16,11 @@ This tool automatically optimizes your video files for minimal resource usage, a
 
 ---
 
-### 🚀 Quick Install
+### 🚀 Quick Install (Recommended)
 
-Open a terminal and run the following commands:
+The installer script handles everything for you: dependency checks, file placement, and shortcut configuration.
 
-1.  **Clone the repository:**
+1.  **Clone the repository anywhere on your system:**
     ```sh
     git clone https://github.com/daurydicaprio/live-wallpaper-for-omarchy-linux.git
     cd live-wallpaper-for-omarchy-linux
@@ -31,7 +31,11 @@ Open a terminal and run the following commands:
     ./install.sh
     ```
 
-The installer will check for dependencies, copy the script to your local path, make it executable, and add the required keyboard shortcut to your `~/.config/hypr/bindings.conf`.
+**What the installer does:**
+-   Checks if all required dependencies (`mpvpaper`, `jq`, etc.) are installed.
+-   Copies the main script to `~/.local/bin/` and makes it executable.
+-   **Automatically adds the `Super + Ctrl + W` shortcut** to your `~/.config/hypr/bindings.conf` file.
+-   Reminds you to reload Hyprland to activate the new shortcut.
 
 ---
 
