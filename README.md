@@ -9,9 +9,9 @@ This tool automatically optimizes your video files for minimal resource usage, a
 ### ✨ Features
 
 -   **On-the-Fly Optimization:** Automatically creates a highly efficient, 1080p, 24fps cached version of your video wallpapers using `ffmpeg` to ensure minimal CPU/GPU usage.
--   **Intelligent Toggle:** A single shortcut (`Super + Ctrl + W`) to activate, cycle through, and deactivate your live wallpapers.
+-   **Intelligent Toggle & Cycle:** A single shortcut (`Super + Ctrl + W`) activates, cycles sequentially through all available videos, and deactivates the live wallpaper.
 -   **Universal Hardware Acceleration:** Uses `mpvpaper` with `--hwdec=auto-copy` to leverage the most efficient "zero-copy" hardware decoding available on your system (Intel, AMD, or NVIDIA).
--   **Sequential Cycling:** Cycles through all numerically prefixed videos (e.g., `1-video.mp4`, `2-video.mp4`) in your theme's `live` folder.
+-   **Dynamic Theme Integration:** Automatically finds videos from the currently active Omarchy theme's `live` folder.
 -   **Robust & Safe:** Designed to not interfere with Omarchy's base files. It intelligently cleans up processes to prevent conflicts or resource leaks.
 
 ---
@@ -25,7 +25,6 @@ Open a terminal and run the following commands:
     git clone https://github.com/daurydicaprio/live-wallpaper-for-omarchy-linux.git
     cd live-wallpaper-for-omarchy-linux
     ```
-    *(Note: Replace `daurydicaprio` with your actual GitHub username if different).*
 
 2.  **Run the installer:**
     ```sh
@@ -43,22 +42,17 @@ The installer will check for dependencies, copy the script to your local path, m
 
 2.  **Name Your Videos:** Name your files with a number prefix to define the cycle order (e.g., `1-forest.mp4`, `2-city.webm`, etc.).
 
-3.  **Toggle:** Use the shortcut `Super + Ctrl + W` to activate the first live wallpaper. Press it again to cycle to the next one. After the last video in the sequence, it will deactivate and restore your static wallpaper.
+3.  **Toggle:** Use the shortcut `Super + Ctrl + W` to activate and cycle through your live wallpapers.
 
 ---
 
-### 🔧 Manual Setup
+### 👤 Author
 
-If you prefer a manual installation:
+Created by **Daury DiCaprio**.
 
-1.  **Dependencies:** Ensure `mpvpaper`, `jq`, `ffmpeg`, `libnotify`, and `swww` are installed.
-    ```sh
-    sudo pacman -S mpvpaper jq ffmpeg libnotify swww
-    ```
-2.  **Install Script:** Copy `live-wallpaper-toggle.sh` to `~/.local/bin/` and make it executable (`chmod +x`).
-3.  **Add Shortcut:** Add this line to your `~/.config/hypr/bindings.conf`:
-    ```
-    # Live Wallpaper Toggle for Omarchy
-    bind = SUPER CTRL, W, exec, ~/.local/bin/live-wallpaper-toggle.sh
-    ```
-4.  Reload Hyprland.
+-   **Web:** [daurydicaprio.com](https://daurydicaprio.com)
+-   **GitHub:** [@daurydicaprio](https://github.com/daurydicaprio)
+
+### 📄 License
+
+This project is licensed under the MIT License.
