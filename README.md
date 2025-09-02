@@ -8,19 +8,19 @@ This tool automatically optimizes your video files for minimal resource usage, a
 
 ### ✨ Features
 
--   **On-the-Fly Optimization:** Automatically creates a highly efficient, 1080p, 24fps cached version of your video wallpapers using `ffmpeg` to ensure minimal CPU/GPU usage.
--   **Intelligent Toggle & Cycle:** A single shortcut (`Super + Ctrl + W`) activates, cycles sequentially through all available videos, and deactivates the live wallpaper.
--   **Universal Hardware Acceleration:** Uses `mpvpaper` with `--hwdec=auto-copy` to leverage the most efficient "zero-copy" hardware decoding available on your system (Intel, AMD, or NVIDIA).
--   **Dynamic Theme Integration:** Automatically finds videos from the currently active Omarchy theme's `live` folder.
--   **Robust & Safe:** Designed to not interfere with Omarchy's base files. It intelligently cleans up processes to prevent conflicts or resource leaks.
+-   **On-the-Fly Optimization:** Automatically creates a highly efficient, 1080p, 24fps cached version of your video files to ensure minimal CPU/GPU usage.
+-   **Intelligent Toggle:** A single shortcut (`Super + Ctrl + W`) to activate, cycle through, and deactivate your live wallpapers.
+-   **Universal Hardware Acceleration:** Uses `mpvpaper` with `hwdec=auto-copy` to leverage the most efficient "zero-copy" hardware decoding available.
+-   **Sequential Cycling:** Cycles through all numerically prefixed videos in your theme's `live` folder.
+-   **Safe & Robust:** Integrates with Omarchy's default wallpaper script for clean restoration and avoids modifying base system files.
 
 ---
 
-### 🚀 Quick Install (Recommended)
+### 🚀 Quick Install
 
-The installer script handles everything for you: dependency checks, file placement, and shortcut configuration.
+Open a terminal and run the following commands:
 
-1.  **Clone the repository anywhere on your system:**
+1.  **Clone the repository:**
     ```sh
     git clone https://github.com/daurydicaprio/live-wallpaper-for-omarchy-linux.git
     cd live-wallpaper-for-omarchy-linux
@@ -30,33 +30,45 @@ The installer script handles everything for you: dependency checks, file placeme
     ```sh
     ./install.sh
     ```
-
-**What the installer does:**
--   Checks if all required dependencies (`mpvpaper`, `jq`, etc.) are installed.
--   Copies the main script to `~/.local/bin/` and makes it executable.
--   **Automatically adds the `Super + Ctrl + W` shortcut** to your `~/.config/hypr/bindings.conf` file.
--   Reminds you to reload Hyprland to activate the new shortcut.
+The installer will check for dependencies, copy the script to your local path, and add the required keyboard shortcut. After running it, **reload Hyprland** to activate the shortcut.
 
 ---
 
-### 📁 Usage
+### 📁 **How to Use**
 
-1.  **Place Your Videos:** Add your video wallpaper files to your active Omarchy theme's directory:
-    `~/.config/omarchy/themes/YOUR_THEME/backgrounds/live/`
+This script is designed to work with Omarchy's theme structure.
 
-2.  **Name Your Videos:** Name your files with a number prefix to define the cycle order (e.g., `1-forest.mp4`, `2-city.webm`, etc.).
+#### **Step 1: Create the 'live' Folder**
 
-3.  **Toggle:** Use the shortcut `Super + Ctrl + W` to activate and cycle through your live wallpapers.
+Inside your active Omarchy theme's `backgrounds` directory, create a new folder named `live`.
+
+**Example Path:**
+`~/.config/omarchy/themes/YOUR_THEME/backgrounds/live/`
+
+#### **Step 2: Add and Name Your Videos**
+
+Place your video wallpaper files (`.mp4`, `.webm`, `.mov`, etc.) inside the `live` folder you just created.
+
+To define the cycle order, you **must** name your files with a number prefix.
+
+**Correct Naming Convention:**
+- `1-my-cool-video.mp4`
+- `2-another-one.webm`
+- `10-final-video.mov`
+
+#### **Step 3: Toggle Your Live Wallpaper**
+
+Use the shortcut **`Super + Ctrl + W`**:
+-   **First press:** Activates the `1-...` video.
+-   **Second press:** Cycles to the `2-...` video.
+-   **After the last video:** Deactivates the live wallpaper and restores your static wallpaper.
 
 ---
 
-### 👤 Author
+### 🎨 Compatible Themes
 
-Created by **Daury DiCaprio**.
+Looking for a theme that already supports this structure? Check out [**Pure-Latin Theme**](https://github.com/daurydicaprio/omarchy-pure-latin-theme), a dark, minimalist theme designed for a clean and professional experience.
 
--   **Web:** [daurydicaprio.com](https://daurydicaprio.com)
--   **GitHub:** [@daurydicaprio](https://github.com/daurydicaprio)
+---
 
-### 📄 License
-
-This project is licensed under the MIT License.
+#VERYGoodforlife
