@@ -4,14 +4,16 @@ A robust and highly efficient script to manage and cycle through live video wall
 
 This tool automatically optimizes your video files for minimal resource usage, allows you to cycle through multiple live wallpapers, and safely restores your static wallpaper, all with a single keyboard shortcut.
 
+Created by **Daury Dicaprio** ([daurydicaprio.com](https://daurydicaprio.com)) | Official Omarchy Website: [omarchy.org](https://omarchy.org)
+
 ---
 
 ### ✨ Features
 
--   **On-the-Fly Optimization:** Automatically creates a highly efficient, 1080p, 24fps cached version of your video files to ensure minimal CPU/GPU usage.
+-   **On-the-Fly Optimization:** Automatically creates a highly efficient, 1080p, 24fps cached version of your video wallpapers using `ffmpeg` to ensure minimal CPU/GPU usage.
 -   **Intelligent Toggle:** A single shortcut (`Super + Ctrl + W`) to activate, cycle through, and deactivate your live wallpapers.
 -   **Universal Hardware Acceleration:** Uses `mpvpaper` with `hwdec=auto-copy` to leverage the most efficient "zero-copy" hardware decoding available.
--   **Sequential Cycling:** Cycles through all numerically prefixed videos in your theme's `live` folder.
+-   **Sequential Cycling:** Cycles through all numerically prefixed videos (e.g., `1-video.mp4`, `2-video.mp4`) in your theme's `live` folder.
 -   **Safe & Robust:** Integrates with Omarchy's default wallpaper script for clean restoration and avoids modifying base system files.
 
 ---
@@ -34,7 +36,7 @@ The installer will check for dependencies, copy the script to your local path, a
 
 ---
 
-### 📁 **How to Use**
+### 📁 How to Use
 
 This script is designed to work with Omarchy's theme structure.
 
@@ -71,4 +73,10 @@ Looking for a theme that already supports this structure? Check out [**Pure-Lati
 
 ---
 
-#VERYGoodforlife
+### 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+#VERyGoodforlife
