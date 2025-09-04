@@ -61,7 +61,7 @@ echo "Script installed."
 # --- Step 3: Add the keyboard shortcut ---
 echo "[3/4] Adding keyboard shortcut to ~/.config/hypr/bindings.conf..."
 BINDINGS_FILE="$HOME/.config/hypr/bindings.conf"
-SHORTCUT_LINE=$'\n# Live Wallpaper Toggle for Omarchy\nbind = SUPER CTRL, W, exec, ~/.local/bin/live-wallpaper-toggle.sh'
+SHORTCUT_LINE=$'\n# Live Wallpaper Toggle for Omarchy\nbindd = SUPER CTRL, W, Toggle Live Wallpaper, exec, ~/.local/bin/live-wallpaper-toggle.sh'
 
 # Check if the shortcut already exists to avoid duplicates
 if grep -q "live-wallpaper-toggle.sh" "$BINDINGS_FILE"; then
